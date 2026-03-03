@@ -1,0 +1,252 @@
+:root {
+    --bg-main: #0b1020;
+    --text-main: #e5e7eb;
+    --text-dim: #9ca3af;
+    --accent: #6366f1;
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    overflow: hidden;;
+}
+
+body {
+    padding: 12px;
+    background-color:rgb(235, 238, 240);
+    color: var(--text-main);
+
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    gap: 0;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 240px;
+    background: linear-gradient(180deg, #cccdd6 0%, #0f1629 100%);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease, padding 0.3s ease;
+    border-radius: 0 12px 12px 0;
+    flex-shrink: 0;
+    border-right: 1px solid rgba(99, 102, 241, 0.1);
+    overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, 0.4);
+}
+
+.sidebar.humberger {
+    width: 80px;
+    padding: 12px 10px;
+    align-items: center;
+}
+
+.sidebar h2 {
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.sidebar a:hover {
+    background: rgba(99, 102, 241, 0.1);
+    color: #e5e7eb;
+    padding-left: 18px;
+}
+
+.sidebar a.active {
+    background: rgba(99, 102, 241, 0.15);
+    color: #494be5;
+    border-left: 3px solid #6366f1;
+    padding-left: 11px;
+}
+
+.sidebar.humberger h2,
+.sidebar.humberger nav {
+    display: none;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 240px;
+    padding: 0;
+    min-width: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    scrollbar-gutter: stable;
+}
+
+.main::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main::-webkit-scrollbar-track {
+    background:transparent;
+}
+
+.main::-webkit-scrollbar-thumb {
+    background:transparent;
+    border-radius: 4px;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+    background: rgba(99, 102, 241, 0.5);
+}
+
+.main{
+    max-width: 100%;
+}
+
+.topbar {
+  width: 96%;
+  border-radius: 10px;
+  height: auto;
+  background: rgb(27, 41, 64);
+  padding: 30px 20px;
+  font-size: 1.2rem;
+}
+
+.loader {
+    padding: 40px;
+}
+
+.sidebar .humberger-btn {
+    background: none;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    margin-bottom: 30px;
+    align-self: flex-end;
+}
+
+.sidebar.humberger .humberger-btn {
+    align-self: center;
+    margin-bottom: 0;
+}
+
+.sidebar .humberger-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(99, 102, 241, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    font-weight: bold;
+    color: #6366f1;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sidebar .humberger-icon:hover {
+    background: rgba(99, 102, 241, 0.3);
+}
+
+
+.sidebar h2{
+    color: #000000;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 8px;
+    }
+
+    .layout {
+        flex-direction: column-reverse;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 16px 12px;
+        align-items: stretch;
+        border-radius: 12px 12px 0 0;
+        border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+        border-right: none;
+        overflow-y: visible;
+    }
+
+    .sidebar.humberger {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .sidebar.humberger h2,
+    .sidebar.humberger nav {
+        display: flex;
+    }
+
+    .sidebar.humberger .humberger-btn {
+        align-self: flex-end;
+    }
+
+    .main {
+        margin-left: 0;
+        height: auto;
+    }
+
+    .topbar {
+        padding: 16px 20px;
+        font-size: 18px;
+        width: 100%;
+    }
+}
