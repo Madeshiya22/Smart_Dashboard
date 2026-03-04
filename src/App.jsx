@@ -3,7 +3,8 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Logs } from "lucide-react";
 import "./App.css";
-import { div } from "framer-motion/client";
+import { Pencil } from "lucide-react";
+
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Analytics = React.lazy(() => import("./pages/Analytics"));
@@ -20,7 +21,7 @@ export default function App() {
           className="humberger-btn"
           onClick={() => setHumberger(!humberger)}
         >
-         {humberger ? <Logs size={20} /> : <div className="humberger-icon">X</div>}
+         {humberger ? <Logs size={25} style={{ color: "#6b6dff"}} strokeWidth={2.5} /> : <div className="humberger-icon">X</div>}
         </button>
 
         <h2>Smart Dashboard</h2>
