@@ -1,0 +1,139 @@
+.products {
+  padding: 40px;
+  background: #f6f7fb;
+  min-height: 100vh;
+}
+.products .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.products .top h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1a3a52;
+}
+.products .top button {
+  padding: 10px 18px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.products .top button:hover {
+  background: #4338ca;
+}
+.products .top button .close-form {
+  font-size: 18px;
+}
+.products .modal {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.products .modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.products .modal form input,
+.products .modal form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+.products .modal form input:focus,
+.products .modal form textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+.products .modal form textarea {
+  resize: none;
+  height: 90px;
+}
+.products .modal form button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #10b981;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.products .modal form button:hover {
+  background: #059669;
+}
+.products .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+.products .card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+.products .card:hover {
+  transform: translateY(-5px);
+}
+.products .card img {
+  width: 100%;
+  height: 170px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.products .card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.products .card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+.products .card h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #111;
+}
+.products .card .actions {
+  display: flex;
+  gap: 10px;
+}
+.products .card .actions button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s;
+}
+.products .card .actions button:first-child {
+  background: #f59e0b;
+  color: white;
+}
+.products .card .actions button:first-child:hover {
+  background: #d97706;
+}
+.products .card .actions button:last-child {
+  background: #ef4444;
+  color: white;
+}
+.products .card .actions button:last-child:hover {
+  background: #dc2626;
+}/*# sourceMappingURL=Products.css.map */

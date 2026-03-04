@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/Products.css";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -58,7 +59,7 @@ export default function Products() {
       <div className="top">
         <h2>Products</h2>
         <button onClick={() => setShowForm(!showForm)}>
-        { !showForm ? "+ Add Products" : <div className="close+-form">X</div> }
+        { !showForm ? "+ Add Products" : <div className="close-form">X</div>}
         </button>
       </div>
 
